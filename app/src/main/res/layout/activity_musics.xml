@@ -5,6 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.qhs.myplayer.MusicsActivity">
+  
+  <include
+        layout="@layout/toolbar_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <GridView
         android:id="@+id/gridViewID"
@@ -16,4 +21,5 @@
         android:numColumns="auto_fit"
         android:stretchMode="columnWidth"
         android:verticalSpacing="10dp" />
+
 </android.support.constraint.ConstraintLayout>

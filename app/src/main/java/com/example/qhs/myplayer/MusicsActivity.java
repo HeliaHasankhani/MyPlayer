@@ -4,13 +4,14 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
-
+import android.support.v7.widget.Toolbar;
 import RecyclerAdapter.ImageAdapter;
 
 public class MusicsActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
@@ -23,6 +24,19 @@ public class MusicsActivity extends AppCompatActivity implements AdapterView.OnI
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_musics);
+      
+      //Toolbar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarOther);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                finish();
+            }
+        });
 
         //int categoryID = -1;
         String categoryName = "";
@@ -60,29 +74,6 @@ public class MusicsActivity extends AppCompatActivity implements AdapterView.OnI
         dialog.show();
 
 
-
-
-//        noButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                dialog.dismiss();
-//            }
-//        });
-//
-//        yesButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                //delete the item.
-//                DatabaseHandler db = new DatabaseHandler(context);
-//                db.deleteItem(id);
-//                groceryItems.remove(getAdapterPosition());
-//                notifyItemRemoved(getAdapterPosition());
-//
-//                dialog.dismiss();
-//
-//            }
-//        });
-
         Intent intent = new Intent(this, Play1Activity.class);
 
         String musicID = String.valueOf(categoryID)+String.valueOf(position);
@@ -91,6 +82,7 @@ public class MusicsActivity extends AppCompatActivity implements AdapterView.OnI
         //intent.putExtra("CategoryName", adapterView.getItemAtPosition(position).toString());
 
         startActivity(intent);
+
 
     }
 }
