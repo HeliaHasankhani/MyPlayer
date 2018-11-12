@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">MyPlayer</string>
+    <string name="sure_text">Do you want to download this file?</string>
+
+    <string-array name="musicCategory">
+        <item>Relaxation</item>
+        <item>Study</item>
+        <item>Raining Day</item>
+        <item>Out</item>
+        <item>Love</item>
+        <item>Sleep</item>
+        <item>Kids</item>
+        <item>Exercise</item>
+    </string-array>
 </resources>
