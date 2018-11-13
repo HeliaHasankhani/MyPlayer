@@ -1,6 +1,19 @@
 <resources>
-    <string name="app_name">MyPlayer</string>
+    <string name="app_name">MyPlayer</string>    
     <string name="Rename">New name</string>
     <string name="Playlist_Cancel">CANCEL</string>
     <string name="Playlist_OK">OK</string>
+
+
+    <string-array name="musicCategory">
+        <item>Relaxation</item>
+        <item>Study</item>
+        <item>Raining Day</item>
+        <item>Out</item>
+        <item>Love</item>
+        <item>Sleep</item>
+        <item>Kids</item>
+        <item>Exercise</item>
+    </string-array>
+
 </resources>
